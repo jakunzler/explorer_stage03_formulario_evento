@@ -1,7 +1,17 @@
 body {
     background: #D9D9D9;
 
+    height: 1939px;
+
     margin: 0;
+}
+
+:root {
+    --br-height: 368px;
+
+    --form-height: 1366px;
+    --textarea-height: 168px;
+    --padding-form: 64px;
 }
 
 header {
@@ -15,7 +25,7 @@ header {
     background-color: #121214;
 
     width: 100vw;
-    height: 368px;
+    height: var(--br-height);
     margin: 0;
     padding: 0;
 
@@ -57,12 +67,12 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 64px;
+    padding: var(--padding-form);
     gap: 48px;
 
     position: absolute;
     width: 608px;
-    height: 1430px;
+    height: var(--form-height);
     top: 282px;
 
     background: #FAFAFC;
@@ -118,7 +128,7 @@ h2 {
     border-radius: 8px;
 
     width: 608px;
-    height: 56px;
+    line-height: 56px;
     margin: 0;
 
 }
@@ -129,8 +139,10 @@ textarea {
     border-radius: 8px;
     
     width: 608px;
-    height: 168px;
+    height: var(--textarea-height);
     margin-top: 0;
+
+    resize: none;
 }
 
 select {
@@ -223,39 +235,43 @@ select {
 
     width: 126px;
     height: 56px;
-    margin-top: 32px;
     padding: 0 1.429px 0;
 
 }
 
 footer {
-    padding: 0;
-    margin: 1472px 0 0 0; 
-    /* margin-top calculus -> 282 + 64 + 1430 + 64 - 368 */
-
-    text-align: center;
-
-}
-
-.gray-rectangle {
     background-color: #F0F0F4;
     border-radius: 0px 0px 8px 8px;
 
     width: 736px;
     height: 136px;
-    left: -64px;
 
-    margin: 0 auto;
     padding: 0;
+    margin: 1408px auto 0; 
+    /* margin-top calculus -> 282 + 64 + 1366 + 64 - 368 */
+
+    text-align: center;
+
 }
 
 #save-event {
     background-color: #04D361;
     color: white;
 
+    position: relative;
     width: 608px;
     height: 56px;
 
     border: none;
     border-radius: 8px;
+
+    margin: 40px auto 40px;
 }
+
+#save-event:hover {
+    background-color: #046d34;
+}
+
+input:invalid {
+    border: 1px solid #FF1010;
+   }

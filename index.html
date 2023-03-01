@@ -30,7 +30,7 @@
 
         <div class="form">
 
-            <form action="">
+            <form action="#" id="event-form">
 
                 <div class="information">
 
@@ -46,18 +46,17 @@
                     <p>Link do evento<span>&nbsp;&nbsp;&nbsp;(comece com https://)</span></p>
 
                     <label for="event-link"></label>
-                    <input class="input-line" type="text" id="event-link" name="event-link" minlength="8" required>
+                    <input class="input-line" type="url" id="event-link" name="event-link" required>
 
                     <p>Whatsapp para contato<span>&nbsp;&nbsp;&nbsp;(somente números)</span></p>
 
                     <label for="whats-contact"></label>
-                    <input class="input-line" type="number" id="whats-contact" name="whats-contact" minlength="8" required>
+                    <input class="input-line" type="number" id="whats-contact" name="whats-contact" minlength="9" required>
 
                     <p>Informações extras</p>
 
                     <label for="extra-info"></label>
                     <textarea name="extra-info" id="extra-info" cols="30" rows="10"></textarea>
-
 
                     <p>Categoria</p>
 
@@ -95,7 +94,6 @@
 
                 </div>
 
-
                 <div class="day-hour">
                     
                     <h2>Dia e hora</h2>
@@ -108,29 +106,25 @@
                             <p>Data</p>
 
                             <label for="date"></label>
-                            <input class="date-line" type="datetime" id="date" name="date" minlength="8" required>
+                            <input class="date-line" type="date" id="date" name="date" minlength="8" required>
                         </div>
                         
                         <div class="from">
                             <p>Das</p>
 
                             <label for="date"></label>
-                            <input class="duration-line" type="datetime" id="date" name="date" minlength="8" required>
+                            <input class="duration-line" type="time" id="date" name="date" minlength="8" required>
                         </div>
 
                         <div class="until">
                             <p>Até</p>
 
                             <label for="date"></label>
-                            <input class="duration-line" type="datetime" id="date" name="date" minlength="8" required>
+                            <input class="duration-line" type="time" id="date" name="date" minlength="8" required>
                         </div>
 
                     </div>
                 </div>
-
-
-
-
 
             </form>
 
@@ -139,11 +133,9 @@
     </header>
 
     <footer>
-                        
-        <div class="gray-rectangle"></div>
 
         <label for="save-event"></label>
-        <input type="submit" id="save-event" name="save-event" value="Salvar evento">
+        <input type="submit" form="event-form" id="save-event" name="save-event" value="Salvar evento">
 
     </footer>
 
